@@ -18,8 +18,8 @@
             var result = document.getElementById("result");
 
             // convert addr
-            var gdb_base = 0x555555554000
-            var input_addr = parseInt(input, 16);
+            var gdb_base = 0x555555454000
+            var input_addr = parseInt("0x" + input, 16);
             result.textContent = "0x" + (gdb_base + input_addr).toString(16);
         }
     </script>
