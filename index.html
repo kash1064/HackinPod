@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+        <p>This text is test.</p>
+
+        <input type="text" id="input">
+        <input type="button" onclick="convert_addr()" value="Submit">
+        <p id="result">
+
+        </p>
+    </body>
+
+    <script>
+        function convert_addr() {
+            // input を受け取る
+            var input = document.getElementById("input").value;
+            var result = document.getElementById("result");
+
+            // convert addr
+            var gdb_base = 0x555555554000
+            var input_addr = parseInt(input, 16);
+            result.textContent = "0x" + (gdb_base + input_addr).toString(16);
+        }
+    </script>
+</html>
